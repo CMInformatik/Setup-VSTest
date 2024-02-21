@@ -58,6 +58,7 @@ export async function run(): Promise<void> {
     // Add folder where VSTest lives to the PATH
     core.addPath(VSTestPath)
   } catch (error) {
+    // @ts-ignore
     core.setFailed(error.message)
   }
 }
